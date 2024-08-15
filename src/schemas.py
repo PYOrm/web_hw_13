@@ -26,6 +26,8 @@ class UserModel(BaseModel):
 class UserDb(UserModel):
     id: int
     update_token: str | None
+    avatar: str | None
+    email_confirmed: bool | None
 
     class Config:
         from_attributes = True

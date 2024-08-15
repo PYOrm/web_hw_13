@@ -15,6 +15,9 @@ alembic = "^1.13.2"
 passlib = "^1.7.4"
 bcrypt = "4.0.1"
 cloudinary = "^1.41.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+fastapi-mail = "^1.4.1"
+django = "^5.1"
 redis = "^5.0.8"
 
 

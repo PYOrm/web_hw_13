@@ -9,7 +9,6 @@ async def create_user(db: Session, body: UserModel) -> User:
     db.add(user)
     db.commit()
     db.refresh(user)
-    print(user)
     return user
 
 
@@ -27,3 +26,10 @@ async def update_avatar(email, url: str, db: Session) -> User:
     user.avatar = url
     db.commit()
     return user
+
+
+async def confirmed_email(email: str, db: Session) -> None:
+    user = await get_user_by_email(db, email)
+    user.email_confirmed = True
+    db.commit()
+
