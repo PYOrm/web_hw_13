@@ -125,6 +125,7 @@ celerybeat.pid
 web_hw_13_api/.env
 web_hw_13_django/.env
 .venv
+.env
 env/
 venv/
 ENV/
